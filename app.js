@@ -179,7 +179,7 @@ const states = {
       <div class="input-box">
         <span class="placeholder">有问题，尽管问</span>
         <button class="send-btn icon-only stop-icon" data-action="stop-thinking" aria-label="中止">
-          <img src="https://www.figma.com/api/mcp/asset/8e40a318-6c05-4e3c-9835-9c8a7a99654d" alt="" width="32" height="32" />
+          <svg class="icon-symbol" aria-hidden="true"><use href="#icon-dora-xia" xlink:href="#icon-dora-xia"></use></svg>
         </button>
       </div>
       <div class="input-system-gap"></div>
