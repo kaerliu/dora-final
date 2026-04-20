@@ -179,7 +179,7 @@ const states = {
       <div class="input-box">
         <span class="placeholder">有问题，尽管问</span>
         <button class="send-btn icon-only stop-icon" data-action="stop-thinking" aria-label="中止">
-          <svg class="icon-symbol" aria-hidden="true"><use href="#icon-dora-xia" xlink:href="#icon-dora-xia"></use></svg>
+          <svg class="icon-symbol" aria-hidden="true"><use href="#icon-dora-zhongzhi" xlink:href="#icon-dora-zhongzhi"></use></svg>
         </button>
       </div>
       <div class="input-system-gap"></div>
