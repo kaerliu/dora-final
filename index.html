@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dora Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="phone" id="phone">
+        <header class="status-bar">
+          <span class="status-time">16:29</span>
+          <span class="status-icons" aria-hidden="true">
+            <img class="status-icon status-signal" src="https://www.figma.com/api/mcp/asset/2d157089-7055-42de-b785-9e7f80e2848c" alt="" />
+            <img class="status-icon status-wifi" src="https://www.figma.com/api/mcp/asset/3198d4a1-ce2c-4e5a-ba4c-bd60de63c754" alt="" />
+            <img class="status-icon status-battery" src="https://www.figma.com/api/mcp/asset/6e0114bd-72b9-468f-90c5-bc6d4338896a" alt="" />
+          </span>
+        </header>
+        <nav class="nav nav-mode-list" id="nav-bar">
+          <div class="nav-lead-cluster">
+            <button
+              type="button"
+              id="nav-sidebar"
+              class="nav-sidebar-btn"
+              aria-label="展开侧边栏"
+              aria-expanded="false"
+            >
+              <img class="nav-sidebar-icon" src="https://www.figma.com/api/mcp/asset/ca18d550-be7f-4b5f-94a2-5973c3a13d20" alt="" width="16" height="16" />
+            </button>
+            <strong id="nav-title" class="nav-title-text">Data Agent</strong>
+            <div class="nav-agent-stack" id="nav-agent-stack" aria-hidden="true">
+              <div class="nav-agent-topline">
+                <span class="nav-agent-name" id="nav-agent-name">问数</span>
+              </div>
+              <span class="nav-agent-subtitle" id="nav-agent-subtitle">新聊天</span>
+            </div>
+          </div>
+          <div class="nav-list-trail">
+            <button type="button" class="nav-avatar" aria-label="个人中心">
+              <img
+                class="nav-avatar-img"
+                src="https://www.figma.com/api/mcp/asset/31623a5c-aab8-41ce-98bd-3b6a5ae756a2"
+                alt=""
+                width="30"
+                height="30"
+              />
+            </button>
+          </div>
+          <div class="nav-session-actions">
+            <button type="button" class="nav-action-btn nav-action-btn--history" id="nav-history" aria-label="历史消息">
+              <img
+                src="https://www.figma.com/api/mcp/asset/8ee6084a-db16-4584-8bc0-7134331bb193"
+                alt=""
+                width="24"
+                height="24"
+              />
+            </button>
+            <button type="button" class="nav-action-btn nav-action-btn--timer" aria-label="定时任务">
+              <img
+                src="https://www.figma.com/api/mcp/asset/993a2892-5e8b-47d9-9574-8ab4b08dc82a"
+                alt=""
+                width="24"
+                height="24"
+              />
+            </button>
+            <button type="button" class="nav-action-btn nav-action-btn--new-chat" id="nav-new-chat" aria-label="新会话">
+              <img
+                src="https://www.figma.com/api/mcp/asset/a319c991-c3d7-4168-ba7a-234c4ddf1767"
+                alt=""
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+        </nav>
+        <div id="screen" class="screen"></div>
+        <footer id="input-area" class="input-area"></footer>
+
+        <div id="sidebar-root" class="sidebar-root" aria-hidden="true">
+          <div id="sidebar-mask" class="sidebar-mask"></div>
+          <aside id="sidebar-panel" class="sidebar-panel">
+            <div class="sb-inner">
+              <div class="sb-top-spacer" aria-hidden="true"></div>
+
+              <header class="sb-header">
+                <button type="button" id="sb-sidebar-home" class="sb-home-btn" aria-label="首页">
+                  <img
+                    src="https://www.figma.com/api/mcp/asset/f1443d68-87ab-42bf-b1c6-690944625c66"
+                    alt=""
+                    width="30"
+                    height="30"
+                  />
+                </button>
+                <div class="sb-header-brand">
+                  <span class="sb-header-title">Data Agent</span>
+                </div>
+              </header>
+
+              <div class="sb-scroll">
+                <div id="sb-view-platform" class="sb-view">
+                  <div class="sb-stack sb-stack--tight sb-platform-actions">
+                    <div class="sb-search-pill">
+                      <img class="sb-search-pill-icon" src="https://www.figma.com/api/mcp/asset/7cb818ec-2c0d-4c32-bbb2-38201f89fb6d" alt="" width="16" height="16" />
+                      <span class="sb-search-pill-text">搜索会话</span>
+                    </div>
+                  </div>
+
+                  <div class="sb-stack sb-platform-clones">
+                    <div class="sb-section-label">分身</div>
+                    <div class="sb-stack sb-stack--flush">
+                      <div class="sb-clone-row">
+                        <span class="sb-clone-icon">
+                          <img src="https://www.figma.com/api/mcp/asset/25471341-f2ae-463d-be09-94fbf0617461" alt="" width="16" height="13" />
+                        </span>
+                        <span class="sb-clone-text">企业微信-问数</span>
+                      </div>
+                      <div class="sb-clone-row">
+                        <img class="sb-clone-icon-img" src="https://www.figma.com/api/mcp/asset/12a9031a-69a9-469e-a07a-9d200273661b" alt="" width="16" height="16" />
+                        <span class="sb-clone-text">钉钉-问数</span>
+                        <span class="sb-pill-tag">99+</span>
+                      </div>
+                      <div class="sb-clone-row">
+                        <img class="sb-clone-icon-img" src="https://www.figma.com/api/mcp/asset/8908de22-d8b9-407c-b032-a126da7805d9" alt="" width="16" height="16" />
+                        <span class="sb-clone-text">飞书-问数</span>
+                        <span class="sb-pill-tag sb-pill-tag--narrow">6</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sb-hairline sb-hairline--inset" aria-hidden="true">
+                    <img src="https://www.figma.com/api/mcp/asset/d62a1134-5266-43ab-8cc3-38ad3d782382" alt="" />
+                  </div>
+
+                  <div class="sb-stack sb-platform-sessions">
+                    <div class="sb-section-label">平台会话</div>
+                    <div class="sb-stack sb-stack--flush">
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">帆软25年的销售额是多少</span></button>
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">公司同事的平均年龄大概在多大</span></button>
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">帆软的主要竞争对手有哪些？</span></button>
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">帆软的核心产品有哪些功能？</span></button>
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">帆软的客户主要集中在哪些行业？</span></button>
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">帆软未来五年的发展规划是什么？</span></button>
+                      <button type="button" class="sb-agent-item sb-session-item"><span class="sb-agent-item-text">帆软在数据安全方面有哪些措施？</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="sb-view-agent-list" class="sb-view sb-view-hidden">
+                  <div class="sb-stack sb-list-recent">
+                    <div class="sb-section-label">最近使用</div>
+                    <div class="sb-stack sb-stack--flush">
+                      <button type="button" class="sb-agent-item sb-agent-icon-item sb-agent-item--active"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">问数</span><span class="sb-pill-tag">99+</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">报告</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">某个Agent的名字</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">数据分析</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">用户行为研究</span></button>
+                    </div>
+                  </div>
+                  <div class="sb-hairline sb-hairline--inset" aria-hidden="true">
+                    <img src="https://www.figma.com/api/mcp/asset/d62a1134-5266-43ab-8cc3-38ad3d782382" alt="" />
+                  </div>
+                  <div class="sb-stack sb-list-all">
+                    <div class="sb-search-pill sb-search-pill--agent">
+                      <img class="sb-search-pill-icon" src="https://www.figma.com/api/mcp/asset/f95a4121-c1a7-4d09-bda7-5a69f0045d5c" alt="" width="16" height="16" />
+                      <span class="sb-search-pill-text">搜索Agent</span>
+                    </div>
+                    <div class="sb-section-label">Agent列表</div>
+                    <div class="sb-stack sb-stack--flush">
+                      <button type="button" class="sb-agent-item sb-agent-icon-item sb-agent-item--active"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">问数</span><span class="sb-pill-tag">99+</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">报告</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">某个Agent的名字</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">数据分析</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">用户行为研究</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">市场趋势预测</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">产品性能评估</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">客户反馈汇总</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">风险管理报告</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">技术支持总结</span></button>
+                      <button type="button" class="sb-agent-item sb-agent-icon-item"><span class="sb-list-icon">icon</span><span class="sb-agent-item-text">竞争对手分析</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="sb-footer">
+                <button type="button" class="sb-profile" aria-label="我的">
+                  <img
+                    src="https://www.figma.com/api/mcp/asset/353d613a-6254-42d4-8ff3-a9f17f8b9022"
+                    alt=""
+                    width="24"
+                    height="24"
+                  />
+                </button>
+                <span class="sb-footer-vrule" aria-hidden="true"></span>
+              </footer>
+            </div>
+          </aside>
+        </div>
+
+      </section>
+    </main>
+
+    <script src="https://at.alicdn.com/t/c/font_5157014_8i50w38y1rc.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

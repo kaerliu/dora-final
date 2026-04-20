@@ -1,0 +1,28 @@
+---
+description: Prefer iconfont symbols for all icons
+alwaysApply: true
+---
+
+# Icon Usage Policy
+
+## Source Priority
+- Always prefer icons from the project's iconfont symbol script.
+- Do not use temporary Figma asset URLs for icons unless explicitly requested.
+- If an icon is missing in iconfont, ask user for the iconfont name first.
+
+## Required Script
+- Ensure this script exists in `index.html` before `app.js`:
+  - `//at.alicdn.com/t/c/font_5157014_8i50w38y1rc.js`
+
+## Rendering Method
+- Use symbol references:
+  - `<svg class="icon-symbol" aria-hidden="true"><use href="#icon-..."></use></svg>`
+- Reuse `.icon-symbol` base style and component-specific size classes.
+
+## Migration Rule
+- When editing existing UI, replace Figma CDN icon URLs with iconfont symbols whenever matching icon names are known.
+- Keep interaction/hover behavior unchanged after replacement.
+
+## Validation
+- After replacement, verify icon names exactly match iconfont IDs.
+- If icon does not render, report the missing name and ask for the correct symbol ID.
